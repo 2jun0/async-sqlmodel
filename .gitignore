@@ -1,8 +1,4 @@
-/.pytest_cache
-/.venv
-/.vscode
-/README.md
-/async_sqlmodel
-/poetry.lock
-/pyproject.toml
-/tests
+.pytest_cache
+.venv
+.vscode
+__pycache__
