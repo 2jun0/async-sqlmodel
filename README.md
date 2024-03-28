@@ -2,9 +2,7 @@
 
 Async-SQLModel is an extension module of [SQLmodel](https://sqlmodel.tiangolo.com/). It enables the creation of awaitable fields in SQLModel, making it compatible with asynchronous programming, particularly beneficial when utilizing asynchronous relationship fields.
 
-Async-SQLModel is based on Python type annotations, and compatible with existing SQLModel models.
-
-Async-SQLModel is available under the [MIT License](./LICENSE).
+Available under the [MIT License](./LICENSE).
 
 ## Installation
 
@@ -91,7 +89,7 @@ class Hero(AsyncSQLModel, table=True):
     awt_team: Awaitable[Optional[Team]] = AwaitableField(field="team")
 ```
 
-Using an with Relationship fields can resolve the issues encountered during lazy loading:
+Using an AwaitableField with Relationship fields can resolve the issues encountered during lazy loading:
 
 ```python
 hero = (
