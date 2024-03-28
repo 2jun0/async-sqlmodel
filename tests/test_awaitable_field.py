@@ -65,9 +65,7 @@ async def test_awaitable_relation_field(clear_sqlmodel):
         await session.commit()
 
     async with AsyncSession(engine) as session:
-        hero = (
-            await session.exec(select(Hero).where(Hero.id == hero_rusty_man.id))
-        ).one()
+        hero = (await session.exec(select(Hero).where(Hero.name == "Rusty-Man"))).one()
 
         # loading lazy loading attribute will raise MissingGreenlet error
         with pytest.raises(MissingGreenlet):
