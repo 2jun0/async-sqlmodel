@@ -1,6 +1,8 @@
 ## Async-SQLModel
 
-Async-SQLModel is an extension module of [SQLmodel](https://sqlmodel.tiangolo.com/). It enables the creation of awaitable fields in SQLModel, making it compatible with asynchronous programming, particularly beneficial when utilizing asynchronous relationship fields.
+Async-SQLModel is an extension module of [SQLModel](https://sqlmodel.tiangolo.com/),  
+making it compatible with asynchronous programming, especially useful when lazy-loading relational fields asynchronously.  
+It supports awaitable fields in SQLModel model, making access to other fields awaitable.
 
 Available under the [MIT License](./LICENSE).
 
