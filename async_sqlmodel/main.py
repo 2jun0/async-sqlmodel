@@ -1,5 +1,4 @@
-from collections.abc import Coroutine
-from typing import Any, ClassVar, Dict, Tuple, Type
+from typing import Any, ClassVar, Coroutine, Dict, Tuple, Type
 
 from pydantic._internal._repr import Representation
 from sqlalchemy.util.concurrency import greenlet_spawn

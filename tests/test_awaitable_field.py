@@ -1,5 +1,4 @@
-from collections.abc import Awaitable
-from typing import List, Optional
+from typing import Awaitable, List, Optional
 
 import pytest
 from sqlalchemy.exc import MissingGreenlet
