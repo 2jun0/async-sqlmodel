@@ -17,7 +17,8 @@ async def test_awaitable_nomral_field(clear_sqlmodel):
         name: str
         secret_name: str
         age: Optional[int] = None
-        awaitable_name: Awaitable[str] = AwaitableField(field="name")
+        awt_name: Awaitable[str] = AwaitableField(field="name")
+        awt_age: Awaitable[str] = AwaitableField(field="age")
 
     hero_deadpond = Hero(name="Deadpond", secret_name="Dive Wilson")
 
@@ -32,7 +33,7 @@ async def test_awaitable_nomral_field(clear_sqlmodel):
         with pytest.raises(MissingGreenlet):
             hero_deadpond.name
 
-        name = await hero_deadpond.awaitable_name
+        name = await hero_deadpond.awt_name
         assert name == "Deadpond"
 
 
