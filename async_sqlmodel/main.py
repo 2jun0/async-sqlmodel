@@ -54,10 +54,12 @@ class AsyncSQLModelMetaclass(SQLModelMetaclass):
     ) -> None:
         for field_name, field_info in cls.__async_sqlmodel_awaitable_fields__.items():
 
-            def get_awaitable_fields(self) -> Coroutine[Any, Any, Any]:
-                return greenlet_spawn(getattr, self, field_info.field)
+            def get_awaitable_field(
+                self, field: str = field_info.field
+            ) -> Coroutine[Any, Any, Any]:
+                return greenlet_spawn(getattr, self, field)
 
-            setattr(cls, field_name, property(get_awaitable_fields))  # type: ignore
+            setattr(cls, field_name, property(get_awaitable_field))  # type: ignore
 
         SQLModelMetaclass.__init__(cls, classname, bases, dict_, **kw)
 
