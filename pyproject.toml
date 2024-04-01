@@ -6,15 +6,15 @@ authors = ["2jun0 <soo28819@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 sqlmodel = "^0.0.16"
 sqlalchemy = "^2.0.29"
 greenlet = "^3.0.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.1.1"
-pytest-asyncio = "^0.23.6"
-aiosqlite = "^0.20.0"
+pytest-asyncio = "0.21.1"
+aiosqlite = "0.19.0"
 
 [build-system]
 requires = ["poetry-core"]
