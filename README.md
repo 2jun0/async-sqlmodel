@@ -35,8 +35,7 @@ class Hero(AsyncSQLModel, table=True):
 Adding an **AwaitableField** yields an awaitable field for the `field` specified in the argument.
 
 ```python
-from typing import Optional
-from collections.abc import Awaitable
+from typing import Optional, Awaitable
 
 from sqlmodel import Field
 from async_sqlmodel import AsyncSQLModel, AwaitableField
