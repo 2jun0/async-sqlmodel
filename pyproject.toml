@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "async-sqlmodel"
-version = "0.1.2"
+version = "0.1.3"
 description = ""
 authors = ["2jun0 <soo28819@gmail.com>"]
 readme = "README.md"
